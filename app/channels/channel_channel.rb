@@ -1,8 +1,9 @@
 class ChannelChannel < ApplicationCable::Channel
   def subscribed
     # stream_from "some_channel"
-    @channel = Channel.find(params[:id]) #probably change to a variable that will be passed in body ... 
-    stream_for @channel
+    #@channel = Channel.find(2) #probably change to a variable that will be passed in body ... 
+    stream_from "channel_channel"
+    
   end
 
   def received(data)
