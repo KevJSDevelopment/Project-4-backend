@@ -53,5 +53,8 @@ Rails.application.configure do
   #added 
   config.action_cable.url = 'wss://localhost:3000/cable'
   config.action_cable.disable_request_forgery_protection = true
-  
+  config.action_cable.allowed_request_origins = [
+    # Local address we use for our standalone client
+    'http://localhost:3001',
+  ]
 end
