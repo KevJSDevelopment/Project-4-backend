@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Channel.destroy_all()
+User.destroy_all()
+Message.destroy_all()
+
+newChannel = Channel.create(name: "newChannel")
+newUser = User.create(username: "kdubs", first_name: "kevin", last_name: "sheehan")
+message = Message.create(text: "this is a secret", user_id: newUser.id, channel_id: newChannel.id)

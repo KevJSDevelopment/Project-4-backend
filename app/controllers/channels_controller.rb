@@ -2,7 +2,8 @@ class ChannelsController < ApplicationController
 
 
     def show 
-        channel = Channel.find(params[:id])
+        channel = Channel.first()
+        #change this and any other .first methods to make them dynamic???????
 
         render json: channel.to_json()
     end

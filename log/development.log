@@ -917,3 +917,69 @@ Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"chann
 Completed 200 OK in 54ms (Views: 0.1ms | ActiveRecord: 29.3ms | Allocations: 11097)
 
 
+Started GET "/channels/2" for ::1 at 2020-11-05 18:10:55 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:10:55 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:10:55 -0500
+  Parameters: {"id"=>"2"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1090)
+
+
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ActiveRecord::RecordNotFound - Couldn't find Channel without an ID]: /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:431:in `find_with_ids' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find' | /Users/sosa/Flatiron/mod4/mod4-project/Project-4-backend/app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/channels/2" for ::1 at 2020-11-05 18:12:13 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:12:13 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:12:13 -0500
+  Parameters: {"id"=>"2"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1087)
+
+
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ActiveRecord::RecordNotFound - Couldn't find Channel without an ID]: /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:431:in `find_with_ids' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find' | /Users/sosa/Flatiron/mod4/mod4-project/Project-4-backend/app/channels/channel_channel.rb:5:in `subscribed'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChannel Destroy (0.6ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 1]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChannel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChannel Destroy (0.2ms)[0m  [1m[31mDELETE FROM "channels" WHERE "channels"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mMessage Load (3.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChannel Create (0.7ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "newChannel"], ["created_at", "2020-11-05 23:22:20.563055"], ["updated_at", "2020-11-05 23:22:20.563055"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kdubs"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "kdubs"], ["first_name", "kevin"], ["last_name", "sheehan"], ["created_at", "2020-11-05 23:22:20.574153"], ["updated_at", "2020-11-05 23:22:20.574153"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("text", "user_id", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "this is a secret"], ["user_id", 1], ["channel_id", 4], ["created_at", "2020-11-05 23:22:20.599045"], ["updated_at", "2020-11-05 23:22:20.599045"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/channels/2" for ::1 at 2020-11-05 18:23:18 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:23:18 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:23:18 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (11.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 47ms (Views: 0.1ms | ActiveRecord: 32.4ms | Allocations: 12491)
+
+
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ArgumentError - You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.]: /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:442:in `find_one' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:433:in `find_with_ids' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find'

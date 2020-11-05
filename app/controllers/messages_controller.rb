@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
         message = Message.new(text: params[:message], user_id: 1, channel_id: 2)
 
         if message.save
-            channel = Channel.find(2)
+            channel = Channel.first()
             ChannelChannel.broadcast_to(channel, message)
         else
             message = "sucks to suck"
