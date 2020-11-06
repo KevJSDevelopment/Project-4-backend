@@ -1290,3 +1290,988 @@ Completed 200 OK in 43ms (Views: 0.3ms | ActiveRecord: 23.8ms | Allocations: 128
   ↳ app/channels/channel_channel.rb:5:in `subscribed'
 ChannelChannel is transmitting the subscription confirmation
 ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:08:09 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:08:09 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:08:09 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 13.2ms | Allocations: 12753)
+
+
+  [1m[36mChannel Load (2.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:08:57 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:08:57 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:08:57 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 1063)
+
+
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:09:53 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:09:53 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:09:53 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1047)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:10:05 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:10:05 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:10:05 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:10:05 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:10:05 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:10:05 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (3.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 1324)
+
+
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:12:06 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:12:06 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:12:06 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 1208)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:12:09 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:12:09 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:12:09 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 1225)
+
+
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:12:10 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:12:10 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:12:10 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (8.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 8.4ms | Allocations: 1024)
+
+
+  [1m[36mChannel Load (2.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:13:56 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:13:56 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:13:56 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (2.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 1081)
+
+
+  [1m[36mChannel Load (2.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:14:00 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:14:00 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:14:00 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 1275)
+
+
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:14:10 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:14:10 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:14:10 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (12.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 12.1ms | Allocations: 1714)
+
+
+  [1m[36mChannel Load (22.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:14:21 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:14:21 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:14:21 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1207)
+
+
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:14:30 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:14:30 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:14:30 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 1207)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:14:39 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:14:39 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:14:39 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1226)
+
+
+  [1m[36mChannel Load (2.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:14:48 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:14:48 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:14:48 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1092)
+
+
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+[ActionCable] Broadcasting to channel_channel: {:message=>"its working"}
+Started GET "/cable" for ::1 at 2020-11-05 19:19:52 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:19:52 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:19:52 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1290)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:19:54 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:19:54 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:19:54 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1396)
+
+
+  [1m[36mChannel Load (1.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:19:55 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:19:55 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:19:55 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1207)
+
+
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:20:17 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:20:17 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:17 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 1061)
+
+
+  [1m[36mChannel Load (1.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+[ActionCable] Broadcasting to channel_channel: {:message=>"its working"}
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:20:32 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:20:32 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:32 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 1249)
+
+
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+[ActionCable] Broadcasting to channel_channel: {:message=>"its working"}
+Started GET "/cable" for ::1 at 2020-11-05 19:20:57 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:20:57 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:20:57 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1064)
+
+
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:21:02 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:21:02 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:21:02 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1092)
+
+
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:21:42 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:21:42 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:21:42 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:21:42 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (2.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 850)
+
+
+Started GET "/cable" for ::1 at 2020-11-05 19:21:42 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:21:42 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (2.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:22:10 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:22:10 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:22:10 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (2.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 1024)
+
+
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+[ActionCable] Broadcasting to channel_channel: {:message=>"its working"}
+[ActionCable] Broadcasting to ChannelChannel: {:message=>"its working"}
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:23:41 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:23:41 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:23:41 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 850)
+
+
+Started GET "/cable" for ::1 at 2020-11-05 19:23:41 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:23:41 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+[ActionCable] Broadcasting to ChannelChannel: {:message=>"its working"}
+Started GET "/cable" for ::1 at 2020-11-05 19:28:47 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:28:47 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:28:47 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 995)
+
+
+Started GET "/channels/1" for ::1 at 2020-11-05 19:28:50 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:28:50 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (28.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 28.5ms | Allocations: 850)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:28:50 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:29:57 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:29:57 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:29:57 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.5ms | Allocations: 850)
+
+
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:29:58 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:29:58 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:29:58 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1239)
+
+
+  [1m[36mChannel Load (2.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:30:06 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:30:06 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:30:06 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1381)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:30:07 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:30:07 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:30:07 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1024)
+
+
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:30:30 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:30:30 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:30:30 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (2.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 1207)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:30:32 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:30:32 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:30:32 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (4.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 4.3ms | Allocations: 1237)
+
+
+  [1m[36mChannel Load (1.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:30:42 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:30:42 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:30:42 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1212)
+
+
+  [1m[36mChannel Load (4.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:30:56 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:30:56 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:30:56 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (2.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 1396)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:30:58 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:30:58 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (2.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 850)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:30:58 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:31:06 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:31:06 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:31:06 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1239)
+
+
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:31:14 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:31:14 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:31:14 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1024)
+
+
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:31:16 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:31:16 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:31:16 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1024)
+
+
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:31:19 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:31:19 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:31:19 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1226)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:31:32 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:31:32 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1130)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:31:32 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:31:32 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:31:32 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 850)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:31:32 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:31:56 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:31:56 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:31:56 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1024)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:32:00 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:32:00 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:32:00 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1061)
+
+
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:32:03 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:32:03 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:32:03 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.9ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1207)
+
+
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started POST "/messages" for ::1 at 2020-11-05 19:32:06 -0500
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>"it's working"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 9.1ms | Allocations: 19105)
+
+
+  
+NoMethodError (undefined method `json' for "sucks to suck":String):
+  
+app/controllers/messages_controller.rb:13:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:34:26 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:34:26 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (6.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 54ms (Views: 0.1ms | ActiveRecord: 32.2ms | Allocations: 4844)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:26 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started POST "/messages" for ::1 at 2020-11-05 19:34:28 -0500
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>"it's working"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 6.3ms | Allocations: 15021)
+
+
+  
+NoMethodError (undefined method `json' for "sucks to suck":String):
+  
+app/controllers/messages_controller.rb:13:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:50 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:34:50 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:34:50 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 30.5ms | Allocations: 4836)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:34:50 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started POST "/messages" for ::1 at 2020-11-05 19:34:55 -0500
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>"it's working"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/messages_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 25299ms (ActiveRecord: 10.7ms | Allocations: 593014)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/messages_controller.rb:14:in `create'
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:35:23 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:35:23 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:35:23 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:35:28 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (39.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 345ms (Views: 4.8ms | ActiveRecord: 57.1ms | Allocations: 3381009)
+
+
+  [1m[36mChannel Load (104.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started POST "/messages" for ::1 at 2020-11-05 19:35:33 -0500
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>"it's working"}
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mMessage Create (3.2ms)[0m  [1m[32mINSERT INTO "messages" ("text", "user_id", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "it's working"], ["user_id", 1], ["channel_id", 1], ["created_at", "2020-11-06 00:35:36.987972"], ["updated_at", "2020-11-06 00:35:36.987972"]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (4.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+[ActionCable] Broadcasting to channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ: #<Message id: 2, text: "it's working", user_id: 1, channel_id: 1, created_at: "2020-11-06 00:35:36", updated_at: "2020-11-06 00:35:36">
+Completed 204 No Content in 876ms (ActiveRecord: 43.6ms | Allocations: 9584676)
+
+
+Started GET "/channels/1" for ::1 at 2020-11-05 19:35:58 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:35:58 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:35:58 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 19.7ms | Allocations: 11188)
+
+
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started POST "/messages" for ::1 at 2020-11-05 19:36:01 -0500
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>"it's working"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mMessage Create (0.7ms)[0m  [1m[32mINSERT INTO "messages" ("text", "user_id", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "it's working"], ["user_id", 1], ["channel_id", 1], ["created_at", "2020-11-06 00:36:01.945306"], ["updated_at", "2020-11-06 00:36:01.945306"]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+[ActionCable] Broadcasting to channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ: #<Message id: 3, text: "it's working", user_id: 1, channel_id: 1, created_at: "2020-11-06 00:36:01", updated_at: "2020-11-06 00:36:01">
+Completed 204 No Content in 59ms (ActiveRecord: 10.4ms | Allocations: 16645)
+
+
+ChannelChannel transmitting {"id"=>3, "text"=>"it's working", "user_id"=>1, "channel_id"=>1, "created_at"=>"2020-11-06T00:36:01.945Z", "updated_at"=>"2020-11-06T00:36:01.945Z"} (via streamed from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ)
+Started GET "/cable" for ::1 at 2020-11-05 19:36:49 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:36:49 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:36:49 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 1042)
+
+
+  [1m[36mChannel Load (5.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:36:59 -0500
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 19:36:59 -0500
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+ChannelChannel stopped streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 19:36:59 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable" for ::1 at 2020-11-05 19:36:59 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:36:59 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (30.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 30.1ms | Allocations: 1847)
+
+
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/cable" for ::1 at 2020-11-05 19:37:06 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 19:37:06 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:37:06 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (2.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 1242)
+
+
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started POST "/messages" for ::1 at 2020-11-05 19:37:08 -0500
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>"it's working"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (1.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mMessage Create (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("text", "user_id", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "it's working"], ["user_id", 1], ["channel_id", 1], ["created_at", "2020-11-06 00:37:09.011636"], ["updated_at", "2020-11-06 00:37:09.011636"]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+[ActionCable] Broadcasting to channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ: #<Message id: 4, text: "it's working", user_id: 1, channel_id: 1, created_at: "2020-11-06 00:37:09", updated_at: "2020-11-06 00:37:09">
+Completed 204 No Content in 43ms (ActiveRecord: 4.6ms | Allocations: 5553)
+
+
+ChannelChannel transmitting {"id"=>4, "text"=>"it's working", "user_id"=>1, "channel_id"=>1, "created_at"=>"2020-11-06T00:37:09.011Z", "updated_at"=>"2020-11-06T00:37:09.011Z"} (via streamed from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ)
+ChannelChannel transmitting {"id"=>4, "text"=>"it's working", "user_id"=>1, "channel_id"=>1, "created_at"=>"2020-11-06T00:37:09.011Z", "updated_at"=>"2020-11-06T00:37:09.011Z"} (via streamed from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ)
