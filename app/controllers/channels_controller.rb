@@ -17,8 +17,6 @@ class ChannelsController < ApplicationController
             message = "failed"
             render json: message.to_json()
         end
-
-
     end
 
 end
