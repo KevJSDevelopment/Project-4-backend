@@ -2,7 +2,8 @@ class ChannelChannel < ApplicationCable::Channel
   def subscribed
     # stream_from "some_channel"
     #@channel = Channel.find(2) #probably change to a variable that will be passed in body ... 
-    channel = Channel.find(Channel.first())
+    channel = Channel.find(params[:id])
+    # byebug
     stream_for channel
     # byebug
 

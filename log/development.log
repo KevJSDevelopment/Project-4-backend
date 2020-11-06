@@ -983,3 +983,310 @@ Completed 200 OK in 47ms (Views: 0.1ms | ActiveRecord: 32.4ms | Allocations: 124
   [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   ↳ app/channels/channel_channel.rb:5:in `subscribed'
 Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ArgumentError - You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.]: /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:442:in `find_one' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:433:in `find_with_ids' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/sosa/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels"[0m
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mMessage Load (3.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mChannel Create (1.1ms)[0m  [1m[32mINSERT INTO "channels" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "newChannel"], ["created_at", "2020-11-05 23:24:55.997785"], ["updated_at", "2020-11-05 23:24:55.997785"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kdubs"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "kdubs"], ["first_name", "kevin"], ["last_name", "sheehan"], ["created_at", "2020-11-05 23:24:56.014980"], ["updated_at", "2020-11-05 23:24:56.014980"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Create (1.0ms)[0m  [1m[32mINSERT INTO "messages" ("text", "user_id", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "this is a secret"], ["user_id", 1], ["channel_id", 1], ["created_at", "2020-11-05 23:24:56.049071"], ["updated_at", "2020-11-05 23:24:56.049071"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/cable" for ::1 at 2020-11-05 18:25:16 -0500
+Started GET "/channels/2" for ::1 at 2020-11-05 18:25:16 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"2"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:25:16 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 19.4ms | Allocations: 11546)
+
+
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ArgumentError - You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.]: /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:442:in `find_one' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:433:in `find_with_ids' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find'
+Started GET "/channels/2" for ::1 at 2020-11-05 18:26:15 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:26:15 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"2"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:26:15 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ArgumentError - You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.]: /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:442:in `find_one' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:433:in `find_with_ids' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find'
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 31.7ms | Allocations: 11938)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 18:26:25 -0500
+Started GET "/channels/2" for ::1 at 2020-11-05 18:26:25 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 869)
+
+
+Started GET "/cable" for ::1 at 2020-11-05 18:26:25 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:26:25 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ArgumentError - You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`.]: /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:442:in `find_one' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:433:in `find_with_ids' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find'
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 18:41:59 -0500
+Started GET "/channels/2" for ::1 at 2020-11-05 18:41:59 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:41:59 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 4766)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:41:59 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/cable" for ::1 at 2020-11-05 18:42:23 -0500
+Started GET "/channels/2" for ::1 at 2020-11-05 18:42:23 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"2"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:42:23 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 52ms (Views: 0.4ms | ActiveRecord: 33.3ms | Allocations: 11735)
+
+
+Started GET "/channels/1" for ::1 at 2020-11-05 18:43:08 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:43:08 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:43:09 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (3.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"channel\":\"ChannelChannel\"}"}) [ActiveRecord::RecordNotFound - Couldn't find Channel without an ID]: /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:431:in `find_with_ids' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/relation/finder_methods.rb:69:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/querying.rb:21:in `find' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/activerecord-6.0.3.4/lib/active_record/core.rb:167:in `find' | /Users/kevinsheehan/Documents/Flatiron/Project-4/chat-backend/app/channels/channel_channel.rb:5:in `subscribed'
+Completed 200 OK in 67ms (Views: 0.2ms | ActiveRecord: 39.9ms | Allocations: 11309)
+
+
+Started GET "/channels/1" for ::1 at 2020-11-05 18:43:47 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:43:47 -0500
+Processing by ChannelsController#show as */*
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:43:47 -0500
+  Parameters: {"id"=>"1"}
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.0ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 1227)
+
+
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/channels/1" for ::1 at 2020-11-05 18:44:43 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:44:43 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:44:43 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 52ms (Views: 0.7ms | ActiveRecord: 28.3ms | Allocations: 11305)
+
+
+  [1m[36mChannel Load (3.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"id\":1,\"channel\":\"ChannelChannel\"}"}) [SystemExit - exit]: (byebug):1:in `exit' | (byebug):1:in `subscribed' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:61:in `eval' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:61:in `safe_eval' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:55:in `warning_eval'
+Started GET "/cable" for ::1 at 2020-11-05 18:46:17 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 18:46:17 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:46:17 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (2.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 26.4ms | Allocations: 12824)
+
+
+  [1m[36mChannel Load (1.1ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/cable" for ::1 at 2020-11-05 18:48:12 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 18:48:12 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:48:12 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 15.6ms | Allocations: 12835)
+
+
+  [1m[36mChannel Load (1.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started GET "/channels/1" for ::1 at 2020-11-05 18:48:38 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:48:38 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:48:38 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 14.7ms | Allocations: 11287)
+
+
+  [1m[36mChannel Load (1.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/cable" for ::1 at 2020-11-05 18:49:00 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 18:49:00 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (10.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:49:00 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 31.3ms | Allocations: 12826)
+
+
+  [1m[36mChannel Load (0.4ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/channels/1" for ::1 at 2020-11-05 18:49:33 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:49:33 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:49:33 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (5.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 56ms (Views: 0.3ms | ActiveRecord: 39.5ms | Allocations: 11331)
+
+
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/channels/1" for ::1 at 2020-11-05 18:50:48 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:50:48 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:50:48 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (1.8ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 25.2ms | Allocations: 11222)
+
+
+  [1m[36mChannel Load (0.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Started GET "/cable" for ::1 at 2020-11-05 18:53:59 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 18:53:59 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:53:59 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 25.6ms | Allocations: 10478)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2020-11-05 18:54:28 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 18:54:28 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:54:28 -0500
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 13.8ms | Allocations: 4944)
+
+
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:54:28 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/cable" for ::1 at 2020-11-05 18:54:53 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 18:54:53 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:54:53 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (0.7ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 7.0ms | Allocations: 5517)
+
+
+  [1m[36mChannel Load (1.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"id\":1,\"channel\":\"ChannelChannel\"}"}) [SystemExit - exit]: (byebug):1:in `exit' | (byebug):1:in `subscribed' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:61:in `eval' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:61:in `safe_eval' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:55:in `warning_eval'
+Started GET "/cable" for ::1 at 2020-11-05 18:55:35 -0500
+Started GET "/channels/1" for ::1 at 2020-11-05 18:55:35 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:55:35 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (5.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 67ms (Views: 5.2ms | ActiveRecord: 5.5ms | Allocations: 632129)
+
+
+Started GET "/channels/1" for ::1 at 2020-11-05 18:55:40 -0500
+Started GET "/cable" for ::1 at 2020-11-05 18:55:40 -0500
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 18:55:40 -0500
+Processing by ChannelsController#show as */*
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (24.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 104ms (Views: 5.1ms | ActiveRecord: 24.5ms | Allocations: 934470)
+
+
+  [1m[36mChannel Load (5.6ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+Could not execute command from ({"command"=>"subscribe", "identifier"=>"{\"id\":1,\"channel\":\"ChannelChannel\"}"}) [SystemExit - exit]: (byebug):1:in `exit' | (byebug):1:in `subscribed' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:61:in `eval' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:61:in `safe_eval' | /Users/kevinsheehan/.rvm/gems/ruby-2.6.1/gems/byebug-11.1.3/lib/byebug/helpers/eval.rb:55:in `warning_eval'
+Started GET "/channels/1" for ::1 at 2020-11-05 19:01:50 -0500
+Started GET "/cable" for ::1 at 2020-11-05 19:01:50 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-05 19:01:50 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.5ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 43ms (Views: 0.3ms | ActiveRecord: 23.8ms | Allocations: 12829)
+
+
+  [1m[36mChannel Load (3.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
