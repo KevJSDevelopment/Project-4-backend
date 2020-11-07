@@ -6626,3 +6626,48 @@ Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 1207)
   ↳ app/channels/channel_channel.rb:5:in `subscribed'
 ChannelChannel is transmitting the subscription confirmation
 ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvNQ
+Started GET "/channels/1" for ::1 at 2020-11-07 09:20:37 -0500
+Started GET "/cable" for ::1 at 2020-11-07 09:20:37 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ChannelsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/cable/" [WebSocket] for ::1 at 2020-11-07 09:20:37 -0500
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/channels_controller.rb:5:in `show'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 10.0ms | Allocations: 11221)
+
+
+  [1m[36mChannel Load (0.3ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/channel_channel.rb:5:in `subscribed'
+ChannelChannel is transmitting the subscription confirmation
+ChannelChannel is streaming from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ
+Started POST "/messages" for ::1 at 2020-11-07 09:20:40 -0500
+Processing by MessagesController#create as */*
+  Parameters: {"message"=>"hi"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:5:in `create'
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:5:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" WHERE "channels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mMessage Create (1.4ms)[0m  [1m[32mINSERT INTO "messages" ("text", "user_id", "channel_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "hi"], ["user_id", 1], ["channel_id", 1], ["created_at", "2020-11-07 14:20:40.331981"], ["updated_at", "2020-11-07 14:20:40.331981"]]
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:8:in `create'
+  [1m[36mChannel Load (0.2ms)[0m  [1m[34mSELECT "channels".* FROM "channels" ORDER BY "channels"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:10:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."channel_id" = $1 LIMIT $2[0m  [["channel_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+[ActionCable] Broadcasting to channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ: {:channel=>#<Channel id: 1, name: "newChannel", created_at: "2020-11-05 23:24:55", updated_at: "2020-11-05 23:24:55">, :users=>#<ActiveRecord::Associations::CollectionProxy [#<User id: 1, username: "kdubs", first_name: "kevin", last_name: "sheehan", created_at: "2020-11-05 23:24:56", updated_at: "2020-11-05 23:24:56">]>, :message=>#<Message id: 139, text: "hi", user_id: 1, channel_id: 1, created_at: "2020-11-07 14:20:40", updated_at: "2020-11-07 14:20:40">, :sent=>#<User id: 1, username: "kdubs", first_name: "kevin", last_name: "sheehan", created_at: "2020-11-05 23:24:56", updated_at: "2020-11-05 23:24:56">}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."channel_id" = $1[0m  [["channel_id", 1]]
+  ↳ app/controllers/messages_controller.rb:11:in `create'
+Completed 204 No Content in 51ms (ActiveRecord: 14.0ms | Allocations: 22562)
+
+
+ChannelChannel transmitting {"channel"=>{"id"=>1, "name"=>"newChannel", "created_at"=>"2020-11-05T23:24:55.997Z", "updated_at"=>"2020-11-05T23:24:55.997Z"}, "users"=>[{"id"=>1, "username"=>"kdubs", "first_name"=>"kevin", "last_name"=>"sheehan", "created_at"=>"2020-11-05T23:24:56.014Z", "updated_at"=>"2020-11-05T23:24:56.014... (via streamed from channel:Z2lkOi8vY2hhdC1iYWNrZW5kL0NoYW5uZWwvMQ)
