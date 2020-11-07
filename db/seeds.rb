@@ -12,4 +12,6 @@ Message.destroy_all()
 
 newChannel = Channel.create(name: "newChannel")
 newUser = User.create(username: "kdubs", first_name: "kevin", last_name: "sheehan")
+newUser2 = User.create(username: "LiquidSnake", first_name: "Kalada", last_name: "William-Jumbo")
 message = Message.create(text: "this is a secret", user_id: newUser.id, channel_id: newChannel.id)
+message2 = Message.create(text: "this is a secret", user_id: newUser2.id, channel_id: newChannel.id)
