@@ -18,5 +18,5 @@ class ChannelsController < ApplicationController
             render json: message.to_json()
         end
     end
-
 end
+
