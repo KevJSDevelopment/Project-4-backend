@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
         if message.save
             # byebug
             channel = Channel.first()
-            ChannelChannel.broadcast_to(channel, {channel: channel, users: channel.users, message: message, sent: message.user})
+            ChannelChannel.broadcast_to(channel, {channel: channel, message_info: {data: message, user: message.user}})
         else
             # byebug
             message = "sucks to suck"
