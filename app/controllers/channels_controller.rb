@@ -2,10 +2,14 @@ class ChannelsController < ApplicationController
 
 
     def show 
-        channel = Channel.first()
+        channel = Channel.find(params[:id])
         #change this and any other .first methods to make them dynamic???????
-
         render json: {channel: channel, message_info: channel.messages.map {|message| {data: message, user: message.user}}}.to_json()
+    end
+
+    def index
+        channels = Channel.all
+        render json: channels.to_json()
     end
 
     def create 
