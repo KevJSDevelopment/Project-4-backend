@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
 
         if message.save
             # byebug
-            channel = Channel.first()
+            channel = Channel.find(params[:channel_id])
             ChannelChannel.broadcast_to(channel, {channel: channel, message_info: {data: message, user: message.user}})
         else
             # byebug
