@@ -11,10 +11,6 @@ class ChannelChannel < ApplicationCable::Channel
   end
 #end
 
-
-
-
-
   # def received(data)
   #   byebug
   #   ChannelChannel.broadcast_to(@channel, {channel: @channel, users: @channel.users, messages: @channel.messages})

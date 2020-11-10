@@ -8,7 +8,8 @@ class ChannelsController < ApplicationController
     end
 
     def index
-        channels = User.find(params[:id]).channels
+        # channels = User.find(params[:id]).channels
+        channels = Channel.all
         render json: channels.to_json()
     end
 
