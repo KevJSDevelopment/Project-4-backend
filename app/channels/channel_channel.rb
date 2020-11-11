@@ -4,7 +4,6 @@ class ChannelChannel < ApplicationCable::Channel
     #@channel = Channel.find(2) #probably change to a variable that will be passed in body ... 
     channel = Channel.find(params[:id])
     stream_for channel
-  
   end
 
   def unsubscribed

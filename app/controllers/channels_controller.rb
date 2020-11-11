@@ -10,6 +10,7 @@ class ChannelsController < ApplicationController
     def index
         # channels = User.find(params[:id]).channels
         channels = Channel.all
+        # byebug
         render json: channels.to_json()
     end
 
