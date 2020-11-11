@@ -10,5 +10,7 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: chat_backend_production
+  url: redis://redistogo:154eca7917d4965445ad3c9c8a2cc1b2@hammerjaw.redistogo.com:11645/
+  # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  # channel_prefix: chat_backend_production
+  # heroku config --app stormy-savannah-56656 | grep REDISTOGO_URL # <-- use this to see redisurl
