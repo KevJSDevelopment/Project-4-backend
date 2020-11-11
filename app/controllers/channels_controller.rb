@@ -1,5 +1,5 @@
 class ChannelsController < ApplicationController
-
+    #needs auth
 
     def show 
         channel = Channel.find(params[:id])
@@ -8,7 +8,9 @@ class ChannelsController < ApplicationController
     end
 
     def index
+        # channels = User.find(params[:id]).channels
         channels = Channel.all
+        # byebug
         render json: channels.to_json()
     end
 
